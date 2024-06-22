@@ -5,10 +5,23 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Attach to Plugin",
+			"name": "Debug Plugin",
 			"type": "node",
 			"request": "attach",
-			"processId": "${command:PickProcess}",
+			"port": 54545,
+			"outFiles": [
+				"${workspaceFolder}/bin/**/*.js"
+			],
+			"resolveSourceMapLocations": [
+				"${workspaceFolder}/**"
+			],
+			"preLaunchTask": "Plugin watch"
+		},
+		{
+			"name": "Attach to running Plugin",
+			"type": "node",
+			"request": "attach",
+			"port": 54545,
 			"outFiles": [
 				"${workspaceFolder}/bin/**/*.js"
 			],

@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "watch",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"icon": {
+				"id": "eye",
+				"color": "terminal.ansiGreen"
+			},
+			"isBackground": true,
+      		"problemMatcher": "$rollup-ts-watch",
+			"label": "Plugin watch",
+			"detail": "rollup -c -w --watch.onEnd=\"streamdeck restart com.navnedia.wiz-controller\""
+		}
+	]
+}
