@@ -1,20 +1,21 @@
 {
 	"Name": "WiZ Controller",
-	"Version": "0.1.0.0",
+	"Version": "1.0.0",
 	"Author": "Navnedia",
 	"Actions": [
 		{
-			"Name": "Counter",
-			"UUID": "com.navnedia.wiz-controller.increment",
-			"Icon": "imgs/actions/counter/icon",
-			"Tooltip": "Displays a count, which increments by one on press.",
-			"Controllers": [
-				"Keypad"
-			],
+			"Name": "Toggle Lights On / Off",
+			"UUID": "com.navnedia.wiz-controller.power",
+			"Icon": "imgs/actions/power/action-icon",
+			"Tooltip": "Toggle the state of selected lights on or off.",
 			"States": [
 				{
-					"Image": "imgs/actions/counter/key",
-					"TitleAlignment": "middle"
+					"Name": "Off",
+					"Image": "imgs/actions/power/key-off"
+				},
+				{
+					"Name": "On",
+					"Image": "imgs/actions/power/key-on"
 				}
 			]
 		}
@@ -24,6 +25,7 @@
 	"CodePath": "bin/plugin.js",
 	"Description": "Control your WiZ smart lights from your Stream Deck.",
 	"Icon": "imgs/plugin/marketplace",
+	"URL": "https://github.com/Navnedia/streamdeck-wiz",
 	"SDKVersion": 2,
 	"Software": {
 		"MinimumVersion": "6.5"
